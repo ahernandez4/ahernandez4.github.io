@@ -21,3 +21,23 @@
 .last-row-card{
     margin-bottom: 50px;
 }
+.card-body.flipped{
+    transform: rotatey(180deg);
+}
+.flip-card-body{
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    
+}
+.card-body-front{
+    background: white;
+    transition: 1s;
+    backface-visibility: hidden;
+    height: 0;/*hack I had to make*/
+}
+.card-body-back{
+    transform: rotateY(180deg);
+    background: white;
+    backface-visibility: hidden;
+    height: 100%;
+}

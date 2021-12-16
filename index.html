@@ -96,7 +96,7 @@
             <div class="col-md-3">
             Tools:
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9" style="padding: 1em;">
             Git, VSCode, Virtualenv, Nodeenv, Vim
             </div>
           </div>
@@ -110,34 +110,52 @@
       <div class="row">
         <div class="col-md-4 d-flex align-items-stretch custom-card-col">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body flip-card-body" id="left" onclick="addFlip(this.id)">
+              <div class="card-body-front">
             <h5 class="card-title"><b>Chat Room</b></h5>
             <p class="card-text">
               A chat room that written in Java. It allows the user to broadcast message to entire chat, but it also allowed users to send private messages to a single user.
               Written using Java sockets for communication.
             </p>
-          </div>
+            </div>
+            <div class="card-body-back">
+              <h5 class="card-title"><b>Chat room</b></h5>
+              <img src="images/chatroom_screenshot.png" alt="Chat room screen shot" width="256">
+            </div>
+            </div>
           </div>
         </div>
         <div class="col-md-4 d-flex align-items-stretch custom-card-col">
           <div class="card">
-            <div class="card-body">
-            <h5 class="card-title"><b>Kahoot Clone</b></h5>
-            <p class="card-text">
+            <div class="card-body flip-card-body" id="mid" onclick="addFlip(this.id)">
+              <div class="card-body-front">
+              <h5 class="card-title"><b>Kahoot Clone</b></h5>
+              <p class="card-text">
               Together with a group, we developed a simple question and answer game. I developed the backend routes which were used to store questions and answers into MongoDB. 
               Developed the backend API that would return questions and answers as JSON for frontend consumption. 
-            </p>
-          </div>
+              </p>
+              </div>
+              <div class="card-body-back">
+              <h5 class="card-title"><b>Kahoot Clone</b></h5>
+              <img src="images/kahoot_clone.png" alt="kahoot clone screen shot" width="256">
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-md-4 d-flex align-items-stretch custom-card-col">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body flip-card-body" id="right" onclick="addFlip(this.id)">
+              <div class="card-body-front">
             <h5 class="card-title"><b>Trade Runner</b></h5>
             <p class="card-text">
               Together with a group, we built an algorithmic trading platform. I developed server code in NodeJS that allowed Python scirpt initialization via POST requests.
               Developed REST API which returns a script transactions via JSON for frotnend consumption.
             </p>
+          </div>
+          <div class="card-body-back">
+            <h5 class="card-title"><b>Trade Runner</b></h5>
+            <img src="images/Screen_Shot_trader.png" alt="trader runner screen shot" width="256">
+            </div>
           </div>
           </div>
         </div>
@@ -148,5 +166,17 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        function addFlip(myid){
+          var myelement = document.getElementById(myid);
+          if(myelement.classList.contains('flipped')){
+            myelement.classList.remove('flipped');
+          }
+          else{
+            myelement.classList.add('flipped');
+          }
+        }
+      
+    </script>
   </body>
 </html>
